@@ -31,91 +31,81 @@ class ViewControllerTwo: UIViewController {
         buttonAtion.isUserInteractionEnabled = true
         buttonAtion.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(click)))
     }
-    
-//    func lebel1(){
-//        lebel_1.backgroundColor = UIColor.red
-//        UIView.animate(withDuration: 1.0, animations: ({
-//            self.imageLine.transform = CGAffineTransform(translationX: 20, y: 40)
-//        }))
-//    }
-//    func lebel2(){
-//        lebel_2.backgroundColor = UIColor.black
-//        UIView.animate(withDuration: 1.0, animations: ({
-//            self.imageLine.transform = CGAffineTransform(translationX: 20, y: 40)
-//        }))
-//    }
-//    func lebel3(){
-//        lebel_3.backgroundColor = UIColor.blue
-//        UIView.animate(withDuration: 1.0, animations: ({
-//            self.imageLine.transform = CGAffineTransform(translationX: 20, y: 40)
-//        }))
-//    }
-//    var m_lebel_1:Any = lebel1
-//    var m_lebel_2:Any = lebel2
-//    var m_lebel_3:Any = lebel3
-//    var m_lebel_4 = lebel1()
-//    var m_lebel_5 = lebel1()
-//    var m_lebel_6 = lebel1()
-//    var m_lebel_7 = lebel1()
-//    var m_lebel_8 = lebel1()
-//    var m_lebel_9 = lebel1()
-//    var m_lebel_10 = lebel1()
-//    var m_lebel_11 = lebel1()
-//    var m_lebel_12 = lebel1()
-    func lebel1(){
-                lebel_1.backgroundColor = UIColor.red
-                UIView.animate(withDuration: 1.0, animations: ({
-                    self.imageLine.transform = CGAffineTransform(translationX: 20, y: 40)
-                }))
-    }
     @objc func click(){
-        let array = [lebel_1, lebel_2, lebel_3, lebel_4, lebel_5]
+        var array = [lebel_1, lebel_2, lebel_3, lebel_4, lebel_5, lebel_6, lebel_7, lebel_8, lebel_9, lebel_10, lebel_11, lebel_12]
         let rundom = Int(arc4random_uniform(UInt32(array.count)))
         let rundomLebel = array[rundom]
+        
+        //removes the background of lebel
+        let color = UIColor.red
+        for color in array {
+            color?.backgroundColor = nil
+        }
+        
+        //switch animation line
         switch rundomLebel {
         case lebel_1:
             array[rundom]?.backgroundColor = UIColor.red
             UIView.animate(withDuration: 1.0, animations: ({
-                self.imageLine.transform = CGAffineTransform(rotationAngle: 1)
+                self.imageLine.transform = CGAffineTransform(rotationAngle: 0.5)
             }))
         case lebel_2:
             array[rundom]?.backgroundColor = UIColor.red
             UIView.animate(withDuration: 1.0, animations: ({
-                self.imageLine.transform = CGAffineTransform(rotationAngle: 2)
+                self.imageLine.transform = CGAffineTransform(rotationAngle: 1)
             }))
         case lebel_3:
             array[rundom]?.backgroundColor = UIColor.red
             UIView.animate(withDuration: 1.0, animations: ({
-                self.imageLine.transform = CGAffineTransform(rotationAngle: 3)
+                self.imageLine.transform = CGAffineTransform(rotationAngle: 1.5)
             }))
         case lebel_4:
             array[rundom]?.backgroundColor = UIColor.red
             UIView.animate(withDuration: 1.0, animations: ({
-                self.imageLine.transform = CGAffineTransform(rotationAngle: 4)
+                self.imageLine.transform = CGAffineTransform(rotationAngle: 2)
             }))
         case lebel_5:
             array[rundom]?.backgroundColor = UIColor.red
             UIView.animate(withDuration: 1.0, animations: ({
+                self.imageLine.transform = CGAffineTransform(rotationAngle: 2.5)
+            }))
+        case lebel_6:
+            array[rundom]?.backgroundColor = UIColor.red
+            UIView.animate(withDuration: 1.0, animations: ({
+                self.imageLine.transform = CGAffineTransform(rotationAngle: 3)
+            }))
+        case lebel_7:
+            array[rundom]?.backgroundColor = UIColor.red
+            UIView.animate(withDuration: 1.0, animations: ({
+                self.imageLine.transform = CGAffineTransform(rotationAngle: 3.5)
+            }))
+        case lebel_8:
+            array[rundom]?.backgroundColor = UIColor.red
+            UIView.animate(withDuration: 1.0, animations: ({
+                self.imageLine.transform = CGAffineTransform(rotationAngle: 4)
+            }))
+        case lebel_9:
+            array[rundom]?.backgroundColor = UIColor.red
+            UIView.animate(withDuration: 1.0, animations: ({
+                self.imageLine.transform = CGAffineTransform(rotationAngle: 4.5)
+            }))
+        case lebel_10:
+            array[rundom]?.backgroundColor = UIColor.red
+            UIView.animate(withDuration: 1.0, animations: ({
                 self.imageLine.transform = CGAffineTransform(rotationAngle: 5)
+            }))
+        case lebel_11:
+            array[rundom]?.backgroundColor = UIColor.red
+            UIView.animate(withDuration: 1.0, animations: ({
+                self.imageLine.transform = CGAffineTransform(rotationAngle: 5.5)
+            }))
+        case lebel_12:
+            array[rundom]?.backgroundColor = UIColor.red
+            UIView.animate(withDuration: 1.0, animations: ({
+                self.imageLine.transform = CGAffineTransform(rotationAngle: 6)
             }))
             
         default: print("error")
         }
-        
-        
-        
-//        array[rundom]?.backgroundColor = UIColor.red
-//        UIView.animate(withDuration: 1.0, animations: ({
-//            self.imageLine.transform = CGAffineTransform(translationX: 20, y: 40)
-//        }))
-        
-        
-//        var lebelArray = array
-//        if lebelArray.{
-//            print("sc")
-//            array[rundom]?.backgroundColor = UIColor.black
-//        }else{
-//            array[rundom]?.backgroundColor = UIColor.red
-//        }
     }
 }
