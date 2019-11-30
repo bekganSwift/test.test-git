@@ -18,6 +18,7 @@ class ViewControllerFour: UIViewController {
         
     }
     func initEvents() {
+        // gmhgnvmn
         
         singinButton.addTarget(self, action: #selector(clickTextLogingView), for: UIControl.Event.touchUpInside )
     }
